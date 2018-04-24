@@ -1,0 +1,262 @@
+START:
+  name: FIX-A-SERVER
+  description: >
+    FIX-A-SERVER
+  edges:
+    - vertex-id: NODE1
+      pre-requisites:
+        - name: FixAServer.won
+          value: "true"
+          hint: I should try t get rid off these pesky guys trying to get a hold off me.
+    - vertex-id: NODE4
+      pre-requisites:
+        - name: FixAServer.won
+          value: "true"
+          hint: I should try t get rid off these pesky guys trying to get a hold off me.
+  activation:
+    command: "launch-mini-game"
+    activation-keyword-args:
+      mini-game-name: "FixAServer"
+
+  coordinates:
+    x: 1000
+    y: 150
+
+  icon: server.png
+
+NODE1:
+  name: MASTERMIND
+  description: >
+     There are still some leftovers from last night big server crashes.
+
+     I should fix them right away!
+  edges:
+    - vertex-id: START
+      pre-requisites:
+        - name: FixAServer.won
+          value: "true"
+          hint: Another one of these strange locking systems
+    - vertex-id: NODE2
+      pre-requisites:
+        - name: Mastermind.won
+          value: "true"
+          hint: They are really onto me
+  coordinates:
+    x: 700
+    y: 50
+
+  activation:
+    command: "launch-mini-game"
+    activation-keyword-args:
+      mini-game-name: "Mastermind"
+
+  icon: server.png
+
+NODE2:
+  name: XBILL
+  description: >
+     There are still some leftovers from last night big server crashes.
+
+     I should fix them right away!
+  edges:
+    - vertex-id: NODE1
+      pre-requisites:
+        - name: Mastermind.won
+          value: "true"
+          hint: They are really onto me
+    - vertex-id: NODE3
+      pre-requisites:
+        - name: Xbill.won
+          value: "true"
+          hint: Packets are falling
+  activation:
+    command: "launch-mini-game"
+    activation-keyword-args:
+      mini-game-name: "Xbill"
+  coordinates:
+    x: 500
+    y: 0
+
+  icon: server.png
+
+NODE3:
+  name: WIRESHARK
+  description: >
+     There are still some leftovers from last night big server crashes.
+
+     I should fix them right away!
+  edges:
+    - vertex-id: NODE2
+      pre-requisites:
+        - name: Wireshark.won
+          value: "true"
+          hint: Packets are falling
+    - vertex-id: NODE5
+      pre-requisites:
+        - name: Wireshark.won
+          value: "true"
+          hint: ""
+  coordinates:
+    x: 600
+    y: 200
+  activation:
+    command: "launch-mini-game"
+    activation-keyword-args:
+      mini-game-name: "Wireshark"
+
+  icon: server.png
+
+NODE4:
+  name: BREAKOUT
+  description: >
+     There are still some leftovers from last night big server crashes.
+
+     I should fix them right away!
+  edges:
+    - vertex-id: START
+      pre-requisites:
+        - name: FixAServer.won
+          value: "true"
+          hint: I should try t get rid off these pesky guys trying to get a hold off me.
+    - vertex-id: NODE5
+      pre-requisites:
+        - name: FirewallBreaker.won
+          value: "true"
+          hint: Packets are falling
+    - vertex-id: NODE7
+      pre-requisites:
+        - name: FirewallBreaker.won
+          value: "true"
+          hint: Packets are falling
+  activation:
+    command: "launch-mini-game"
+    activation-keyword-args:
+      mini-game-name: "FirewallBreaker"
+      mini-game-keyword-args:
+       map_name: "breakout-2.tmx"
+  coordinates:
+    x: 800
+    y: 250
+
+  icon: server.png
+
+NODE5:
+  name: SOKOBAN
+  description: >
+     There are still some leftovers from last night big server crashes.
+
+     I should fix them right away!
+  edges:
+    - vertex-id: NODE3
+      pre-requisites:
+        - name: Wireshark.won
+          value: "true"
+          hint: ""
+    - vertex-id: NODE4
+      pre-requisites:
+        - name: FirewallBreaker.won
+          value: "true"
+          hint: Packets are falling
+    - vertex-id: NODE6
+      pre-requisites:
+        - name: Sokoban.won
+          value: "true"
+          hint: Packets are falling
+  activation:
+    command: launch-mini-game
+    activation-keyword-args:
+      mini-game-name: Sokoban
+      mini-game-keyword-args:
+         level: 3
+  coordinates:
+    x: 500
+    y: 280
+
+  activation-pre-requisites:
+    - key: "Wireshark.won"
+      value: "true"
+      hint: I should try t get rid off these pesky guys trying to get a hold off me.
+    - key: "FirewallBreaker.won"
+      value: "true"
+      hint: I should try to sniff on those packets floating around.
+
+  icon: server.png
+
+NODE6:
+  name: ENDGAME
+  description: >
+     There are still some leftovers from last night big server crashes.
+
+     I should fix them right away!
+  edges:
+    - vertex-id: NODE5
+      pre-requisites:
+        - name: Sokoban.won
+          value: "true"
+          hint: Packets are falling
+  coordinates:
+    x: 200
+    y: 400
+
+  activation:
+    command: "launch-mini-game"
+    activation-keyword-args:
+      mini-game-name: "Cutscene"
+      mini-game-keyword-args:
+        scene_name: "end-scene"
+        scene_file_name: "cutscenes.yaml"
+    post-run-actions:
+      - action: "exit-action"
+        pre-requisites:
+        - key: Sokoban.won
+          value: "true"
+          hint: "I need to get through to Clippie to destroy"
+
+  activation-pre-requisites:
+    - key: "Xbill.won"
+      value: "true"
+      hint: I should try t get rid off these pesky guys trying to get a hold off me.
+    - key: "Wireshark.won"
+      value: "true"
+      hint: I should try to sniff on those packets floating around.
+    - key: "FirewallBreaker.won"
+      value: "true"
+      hint: I should try t get rid off these pesky guys trying to get a hold off me.
+    - key: "Sokoban.won"
+      value: "true"
+      hint: I should try t get rid off these pesky guys trying to get a hold off me.
+    - key: "Xbill.won"
+      value: "true"
+      hint: I should try t get rid off these pesky guys trying to get a hold off me.
+    - key: "Mastermind.won"
+      value: "true"
+      hint: I should try to sniff on those packets floating around.
+
+  icon: server.png
+
+NODE7:
+  name: BombDetector
+  description: >
+     There are still some leftovers from last night big server crashes.
+
+     I should fix them right away!
+  edges:
+    - vertex-id: NODE4
+      pre-requisites:
+        - name: FirewallBreaker.won
+          value: "true"
+          hint: Packets are falling
+  coordinates:
+    x: 1000
+    y: 400
+
+  activation:
+   command: launch-mini-game
+   activation-keyword-args:
+    mini-game-name: BombDetector
+
+  icon: server.png
+GLOBAL:
+ background: mission_1
+
+...

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.1.4" orientation="orthogonal" renderorder="right-down" width="20" height="15" tilewidth="32" tileheight="32" infinite="0" nextobjectid="60">
+ <tileset firstgid="1" source="numpad.tsx"/>
+ <layer name="Background" width="20" height="15">
+  <data encoding="csv">
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,
+5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5
+</data>
+ </layer>
+ <layer name="Kachelebene 1" width="20" height="15">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,19,19,19,19,19,19,19,19,19,19,19,19,0,0,4,4,4,0,0,
+0,14,0,0,0,0,0,0,0,14,0,0,0,14,0,0,0,0,0,0,
+0,14,0,0,0,0,0,0,0,14,0,0,0,14,0,1,2,3,0,0,
+0,14,0,0,0,0,0,0,0,14,0,0,0,14,0,6,7,8,0,0,
+0,14,0,0,0,0,0,0,0,14,0,0,0,14,0,11,12,13,0,0,
+0,14,0,0,0,0,0,0,0,14,0,0,0,14,0,16,17,18,0,0,
+0,14,0,0,0,0,0,0,0,14,0,0,0,14,0,0,5,0,0,0,
+0,14,0,0,0,0,0,0,0,14,0,0,0,14,0,0,19,5,0,0,
+0,14,0,0,0,0,0,0,0,14,0,0,0,14,0,0,14,14,0,0,
+0,14,0,0,0,0,0,0,0,14,0,0,0,14,0,0,14,14,0,0,
+0,14,0,0,0,0,0,0,0,14,0,0,0,14,0,0,14,14,0,0,
+0,9,19,19,19,19,19,19,19,9,19,19,19,14,0,0,14,14,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,9,14,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup name="Threat">
+  <object id="49" name="Threat_2" x="513" y="416" width="31" height="16"/>
+  <object id="50" name="Threat_1" x="513" y="432" width="31" height="15"/>
+  <object id="51" name="Threat_3" x="513" y="400" width="31" height="16"/>
+  <object id="52" name="Threat_4" x="513" y="384" width="31" height="16"/>
+  <object id="53" name="Threat_5" x="513" y="368" width="31" height="16"/>
+  <object id="54" name="Threat_6" x="513" y="352" width="31" height="16"/>
+  <object id="55" name="Threat_7" x="513" y="336" width="31" height="16"/>
+  <object id="56" name="Threat_8" x="513" y="320" width="31" height="16"/>
+  <object id="57" name="Threat_9" x="513" y="304" width="31" height="16"/>
+  <object id="58" name="Threat_10" x="513" y="288" width="31" height="16"/>
+ </objectgroup>
+ <objectgroup name="Numpad">
+  <object id="3" name="NP_1" x="480" y="96" width="32" height="32"/>
+  <object id="4" name="NP_2" x="512" y="96" width="32" height="32"/>
+  <object id="5" name="NP_3" x="544" y="96" width="32" height="32"/>
+  <object id="6" name="NP_6" x="544" y="128" width="32" height="32"/>
+  <object id="7" name="NP_5" x="512" y="128" width="32" height="32"/>
+  <object id="8" name="NP_4" x="480" y="128" width="32" height="32"/>
+  <object id="9" name="NP_7" x="480" y="160" width="32" height="32"/>
+  <object id="10" name="NP_8" x="512" y="160" width="32" height="32"/>
+  <object id="11" name="NP_9" x="544" y="160" width="32" height="32"/>
+  <object id="12" name="NP_ENTER" x="544" y="192" width="32" height="32"/>
+  <object id="13" name="NP_0" x="512" y="192" width="32" height="32"/>
+  <object id="17" name="NP_C" x="480" y="192" width="32" height="32"/>
+  <object id="18" name="NP_DISPLAY" x="480" y="32" width="96" height="32"/>
+ </objectgroup>
+ <objectgroup name="Lines">
+  <object id="20" name="LINE_1" x="32" y="64" width="256" height="32"/>
+  <object id="21" name="HINT_1" x="288" y="64" width="128" height="32"/>
+  <object id="22" name="LINE_2" x="32" y="96" width="256" height="32"/>
+  <object id="23" name="HINT_2" x="288" y="96" width="128" height="32"/>
+  <object id="24" name="HINT_3" x="288" y="128" width="128" height="32"/>
+  <object id="25" name="LINE_3" x="32" y="128" width="256" height="32"/>
+  <object id="27" name="HINT_4" x="288" y="160" width="128" height="32"/>
+  <object id="28" name="LINE_4" x="32" y="160" width="256" height="32"/>
+  <object id="29" name="HINT_5" x="288" y="192" width="128" height="32"/>
+  <object id="30" name="LINE_5" x="32" y="192" width="256" height="32"/>
+  <object id="31" name="HINT_6" x="288" y="224" width="128" height="32"/>
+  <object id="32" name="LINE_6" x="32" y="224" width="256" height="32"/>
+  <object id="33" name="HINT_7" x="288" y="256" width="128" height="32"/>
+  <object id="34" name="LINE_7" x="32" y="256" width="256" height="32"/>
+  <object id="35" name="HINT_8" x="288" y="288" width="128" height="32"/>
+  <object id="36" name="LINE_8" x="32" y="288" width="256" height="32"/>
+  <object id="37" name="HINT_9" x="288" y="320" width="128" height="32"/>
+  <object id="38" name="LINE_9" x="32" y="320" width="256" height="32"/>
+  <object id="39" name="HINT_10" x="288" y="352" width="128" height="32"/>
+  <object id="40" name="LINE_10" x="32" y="352" width="256" height="32"/>
+  <object id="41" name="HINT_11" x="288" y="384" width="128" height="32"/>
+  <object id="42" name="LINE_11" x="32" y="384" width="256" height="32"/>
+ </objectgroup>
+</map>

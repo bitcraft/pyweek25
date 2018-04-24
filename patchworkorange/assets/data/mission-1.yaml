@@ -1,0 +1,55 @@
+---
+START:
+  name: FIX-A-SERVER
+  description: >
+     There are still some leftovers from last night big server crashes.
+
+     I should fix them right away!
+  activation:
+   command: launch-mini-game
+   activation-keyword-args:
+    mini-game-name: FixAServer
+    mini-game-keyword-args:
+     WIN_SCORE: 500
+  edges:
+    - vertex-id: TERMINAL
+      pre-requisites:
+        - name: FixAServer.won
+          value: "true"
+          hint: Damn, I need to try again. These attackers are really onto something.
+  coordinates:
+    x: 200
+    y: 200
+
+  icon: server.png
+
+TERMINAL:
+  name: TERMINAL
+  description: >
+    I need to go across to get to the faulty Terminal!
+  cleared: I applied the fix, I should go home.
+  edges:
+    - vertex-id: START
+      pre-requisites:
+        - name: FixAServer.won
+          value: "true"
+          hint: Damn, I need to try again. These attackers are really onto something.
+  coordinates:
+    x: 700
+    y: 200
+  activation:
+   command: launch-mini-game
+   activation-keyword-args:
+    mini-game-name: BombDetector
+    post-run-actions:
+     - action: "exit-action"
+       pre-requisites:
+        - key: BombDetector.won
+          value: "true"
+          hint: "I need to get to the Terminal and patch it!"
+
+  icon: server.png
+
+GLOBAL:
+  background: mission_1
+...

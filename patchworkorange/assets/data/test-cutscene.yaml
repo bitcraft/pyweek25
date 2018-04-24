@@ -1,0 +1,26 @@
+cutscene001:
+
+    dialog_strings:
+        - &turtleneck 'My turtleneck is sourced from fair trade organic sheep.'
+        - &whatev 'uh ok, whatever'
+
+    trees:
+    - trigger: testchoice001
+      prompt: *turtleneck
+      choices:
+      - text: *whatev
+        event: 'dismiss-turtleneck'
+
+    script:
+    - set:
+        background: modernoffice.png
+        portrait: dude1.png
+
+    - dialog:
+        border: border-default.png
+        caption: Kale-Stephan Wittenberger
+        text: some text here
+
+    - dialog:
+        text: 2nd line here
+

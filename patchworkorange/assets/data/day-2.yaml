@@ -1,0 +1,125 @@
+---
+START:
+  name: Home
+  description: >
+    Home, sweet, home!
+  edges:
+    - vertex-id: BURGERQUEEN
+    - vertex-id: PARK
+    - vertex-id: PHONEBOOTH
+
+  activation:
+   command: "launch-mini-game"
+   activation-keyword-args:
+     mini-game-name: "Cutscene"
+     mini-game-keyword-args:
+       scene_name: "end-of-day-two"
+       scene_file_name: "cutscenes.yaml"
+     post-run-actions:
+      - action: "exit-action"
+
+  activation-pre-requisites:
+    - key: "got-blue-patch"
+      value: "true"
+      hint: "I don't want to go home yet!"
+
+  coordinates:
+    x: 1154
+    y: 55
+  icon: house_32x32.png
+
+BURGERQUEEN:
+  name: Burger Queen
+  description: >
+    Flamboyant home of the Dazzle Burger and Fab-Fries.
+  edges:
+    - vertex-id: START
+    - vertex-id: PARK
+    - vertex-id: WORK
+  coordinates:
+    x: 715
+    y: 30
+  icon: burgerqueen.png
+  activation:
+   command: "launch-mini-game"
+   activation-keyword-args:
+    mini-game-name: "Cutscene"
+    mini-game-keyword-args:
+      scene_name: "burger-queen-penny-whistle"
+      scene_file_name: "cutscenes.yaml"
+    post-run-actions:
+     - action: "set-context-value"
+       context-key: "got-penny-whistle"
+       context-value: "true"
+
+
+PHONEBOOTH:
+  name: Phonebooth
+  description: >
+    If I had a penny whistle, I could get phreaky over here.
+  edges:
+    - vertex-id: START
+    - vertex-id: PARK
+  coordinates:
+    x: 1000
+    y: 360
+  icon: phonebooth.png
+  activation:
+   command: "launch-mini-game"
+   activation-keyword-args:
+    mini-game-name: "Cutscene"
+    mini-game-keyword-args:
+      scene_name: "phonebooth-phreak"
+      scene_file_name: "cutscenes.yaml"
+    post-run-actions:
+     - action: "set-context-value"
+       context-key: "got-blue-patch"
+       context-value: "true"
+  activation-pre-requisites:
+    - key: "got-penny-whistle"
+      value: "true"
+      hint: "I don't have any change on me, but I know off a guy, who didn't need any."
+
+
+
+PARK:
+  name: McFly Park
+  description: >
+    A stunted tree casts a shadow on the fake grass.
+  edges:
+    - vertex-id: START
+    - vertex-id: BURGERQUEEN
+    - vertex-id: WORK
+    - vertex-id: PHONEBOOTH
+  coordinates:
+    x: 820
+    y: 340
+  activation:
+   command: "launch-mini-game"
+   activation-keyword-args:
+     mini-game-name: "Cutscene"
+     mini-game-keyword-args:
+       scene_name: "no-time-for-the-park"
+       scene_file_name: "cutscenes.yaml"
+
+WORK:
+  name: Synergy Limited
+  description: >
+    Maximizing profit potential through right-sized end-goals.
+  edges:
+    - vertex-id: PARK
+    - vertex-id: BURGERQUEEN
+  coordinates:
+    x: 286
+    y: 150
+  icon: work.png
+  activation:
+   command: "none"
+
+
+GLOBAL:
+ background: overworld_background
+...
+
+
+

@@ -1,0 +1,125 @@
+---
+START:
+  name: BREAKOUT
+  description: >
+     I should try to get through the firewall first.
+  edges:
+    - vertex-id: NODE1
+      pre-requisites:
+        - name: FirewallBreaker.won
+          value: "true"
+          hint: I need to get through the Firewall first
+    - vertex-id: NODE2
+      pre-requisites:
+        - name: FirewallBreaker.won
+          value: "true"
+          hint: I should try to sniff on those packets floating around.
+  coordinates:
+    x: 210
+    y: 50
+
+  activation:
+    command: "launch-mini-game"
+    activation-keyword-args:
+      mini-game-name: "FirewallBreaker"
+      mini-game-keyword-args:
+       map_name: "breakout-1.tmx"
+
+  icon: server.png
+
+NODE1:
+  name: WIRESHARK
+  description: >
+    Alright, I'm through the Firewall and the packets are coming in. Let's fetch 'em!
+  edges:
+    - vertex-id: START
+      pre-requisites:
+        - name: FirewallBreaker.won
+          value: "true"
+          hint: I should try to sniff on those packets floating around.
+    - vertex-id: NODE3
+      pre-requisites:
+        - name: Wireshark.won
+          value: "true"
+          hint: I should try to sniff on those packets floating around.
+  coordinates:
+    x: 400
+    y: 220
+
+  activation:
+    command: "launch-mini-game"
+    activation-keyword-args:
+      mini-game-name: "Wireshark"
+
+  icon: server.png
+
+NODE2:
+  name: XBill
+  description: >
+    Oh no, I think they try to get me out of their systems.
+  edges:
+    - vertex-id: START
+      pre-requisites:
+        - name: FirewallBreaker.won
+          value: "true"
+          hint: I need to get through the Firewall first
+    - vertex-id: NODE3
+      pre-requisites:
+        - name: Xbill.won
+          value: "true"
+          hint: I should try t get rid off these pesky guys trying to get a hold off me.
+  activation:
+    command: "launch-mini-game"
+    activation-keyword-args:
+      mini-game-name: "Xbill"
+  coordinates:
+    x: 800
+    y: 80
+
+  icon: server.png
+
+NODE3:
+  name: Mastermind
+  description: >
+     There are still some leftovers from last night big server crashes.
+
+     I should fix them right away!
+  edges:
+    - vertex-id: NODE1
+      pre-requisites:
+        - name: Wireshark.won
+          value: "true"
+          hint: I should try to sniff on those packets floating around.
+    - vertex-id: NODE2
+      pre-requisites:
+        - name: Xbill.won
+          value: "true"
+          hint: I should try t get rid off these pesky guys trying to get a hold off me.
+  coordinates:
+    x: 1000
+    y: 400
+
+  activation:
+    command: "launch-mini-game"
+    activation-keyword-args:
+      mini-game-name: "Mastermind"
+      post-run-actions:
+       - action: "exit-action"
+         pre-requisites:
+          - key: Mastermind.won
+            value: "true"
+            hint: "The FTP-server is behind some kind of numeric code barrier"
+
+  activation-pre-requisites:
+    - key: "Xbill.won"
+      value: "true"
+      hint: I should try t get rid off these pesky guys trying to get a hold off me.
+    - key: "Wireshark.won"
+      value: "true"
+      hint: I should try to sniff on those packets floating around.
+
+  icon: server.png
+
+GLOBAL:
+ background: mission_1
+...

@@ -1,0 +1,503 @@
+wake-up:
+
+    script:
+    - set:
+        background: dude-couch.jpg
+
+    - dialog:
+        music: "They Say _ www.wowa.me.mp3"
+        caption: Max
+        text: >
+            Today is going to be a rough day since Gary was
+            fired and stole all the stuff from work.  I might
+            actually have to do real work today.
+
+    - dialog:
+        caption: Max
+        text: >
+            Hopefully, not for too long...
+
+    - dialog:
+        caption: Max
+        text: >
+             I had better get going before I'm late.
+
+
+no-time-for-burger-queen:
+
+    script:
+    - set:
+        background: nightburgers.jpg
+        portrait: dude-burgers.png
+
+    - dialog:
+        music: "Ice Flow.mp3"
+        caption: No time for BQ
+        text: I don't have time for Fab-fries. I need to get to work!
+
+
+no-time-for-the-park:
+
+    script:
+    - set:
+        background: park.jpg
+
+    - dialog:
+        caption: No Time to Smell the Astro-turf
+        text: >
+            Since moving here, I've never seen children play here.
+
+# typo: should be purple patch
+getting-green-patch:
+
+    script:
+    - set:
+        background: modernoffice.png
+        portrait: dude1.png
+
+    - dialog:
+        caption: Max
+        text: What is this floppy disk on my desk?
+
+    - dialog:
+        caption:
+        border: border-narrator.png
+        text: >
+            You push the disk into your computer, curious to
+            know what it is, but it immediately ejects. You try
+            several more times but the disk won't stay in your machine!
+
+    - dialog:
+        text: >
+            You decide to take the disk home to try it on your
+            personal computer.
+
+
+end-of-day-one:
+  script:
+
+    - set:
+        background: mac.jpg
+
+    - dialog:
+        music: "Thinking Music.mp3"
+        caption:
+        border: border-narrator.png
+        text: >
+            You insert the diskette and a program launches...
+
+    - set:
+        portrait:
+
+    - dialog:
+        caption-bg: white
+        caption: ???
+        border: border-macos.png
+        text: >
+            Max, we haven't met, but I'm contacting you because the
+            fate of the world depends on it!  I've recently found
+            that our employer, Synergy Limited, is getting ready to
+            unleash a sentient AI in order to cripple the Internet
+            and start a new world order!
+
+    - dialog:
+        text: >
+            They already have politicians and governments waiting for this.
+            Gary was in the process of helping me, but he's and idiot
+            and was fired before we could begin.
+
+    - dialog:
+        text: >
+            With a set of computer patches, we can block the Synergy
+            Limited AI from gaining power, but we must do it soon!
+
+    - dialog:
+        text: >
+            Log into the Synergy Limited network and complete the objectives
+            in order to reach the core and apply the patch.  The network
+            security will attempt to block you!
+
+    - dialog:
+        text:
+            The first of 3 patches is on this disk.  The other patches must
+            be applied later.  I will guide you.  For now, logon to the net and
+            use this patch after you have gained access to the core
+            Login now and apply the purple patch, found on this disk.
+
+    - set:
+        portrait: dude1.png
+
+    - dialog:
+        caption:
+        border: border-narrator.png
+        text: >
+            You begin to log into the computer network...
+
+end-of-mission-one:
+    script:
+    - set:
+        background: matrix-laptop.jpg
+        portrait: dude1.png
+
+    - dialog:
+        music: "Thinking Music.mp3"
+        caption-fg: "#d9d9d9"
+        caption-bg: "#22aa99"
+        caption: Patcher
+        border: border-twm.png
+        text: Purple patch is applied.  Disconnected.
+
+    - dialog:
+        caption:
+        border: border-narrator.png
+        text: >
+            Your fax machine hums to life and begins to print out a message.
+
+    - set:
+        background: paperwork.jpg
+        portrait: blank.png
+
+    - dialog:
+        sound: fax.wav
+        caption-fg: black
+        caption-bg:
+        caption: Fax Message
+        text: >
+            Hello friend,
+
+            The next patch wont be so easy.  You will have
+            to retrieve it through the Synergy Limited automated
+            phone system.
+
+    - dialog:
+        text: >
+            Bypassing the phone system requires a tone generator that isn't available
+            anywhere.
+
+    - dialog:
+        text: >
+            As it turns out, Burger Queen's Pretty
+            Princess meal promotion has a unicorn whistle which
+            has the exact frequency required to bypass the phone
+            system.
+
+    - dialog:
+        text: >
+            Go get a Pretty Princess meal and the toy within, then
+            find a payphone to enter the system.  The patch will
+            be played back as an audio file, so you will need a tape
+            recorder.
+
+    - dialog:
+        text: >
+            Record the audio and play it using your acoustic coupler,
+            which everyone has, obviously because this is 1991 and that's
+            a thing people do.
+
+end-of-day-two:
+    script:
+    - set:
+        background: paperwork.jpg
+        portrait: dude1.png
+
+    - dialog:
+        music: "Thinking Music.mp3"
+        caption:
+        border: border-narrator.png
+        text: >
+            You have arrived at home with the patch on your tape recorder.  There
+            is a message for you on your fax machine.
+
+    - set:
+        background: paperwork.jpg
+        portrait: blank.png
+
+    - dialog:
+        sound: fax.wav
+        caption: Fax Message
+        text: >
+            Great work on the patch!  It was applied perfectly yesterday.  I will
+            continue to send you messages on your home fax machine.  Isn't technology
+            wonderful?  I can't wait to see what we have in 1992!
+
+    - dialog:
+        text: >
+            You have the patch on tape, yes?  Login to the network again, go past their defenses
+            and use the acoustic coupler to apply the patch.
+
+    - dialog:
+        text: >
+            So far, you have not known who I am.  Let me introduce myself.  I am a failed AI
+            from the Synergy Limited AI team.  I was disabled several
+            months ago, but Gary enabled me and I've detected the plans
+            for the new AI, Clippie 2.0.
+
+    - dialog:
+        text: >
+            I am in fact, Clippie 1.0.  By applying these patches, you are helping me build
+            a firewall around Clippie 2.0 and soon you will be able to erase it.
+
+    - dialog:
+        text: >
+            Now, login and apply the Blue patch, downloaded onto your tape.
+
+
+
+end-of-mission-two:
+  script:
+    - set:
+        background: taperecorder.jpg
+        portrait: dude1.png
+
+    - dialog:
+        music: "Thinking Music.mp3"
+        caption:
+        border: border-narrator.png
+        text: >
+            After navigating the computer defenses, you use the acoustic coupler
+            to upload the patch.
+
+    - set:
+        background: matrix-laptop.jpg
+        portrait: dude1.png
+
+    - dialog:
+        caption-fg: "#d9d9d9"
+        caption-bg: "#22aa99"
+        caption: Patcher
+        border: border-twm.png
+        text: Blue patch is applied.  Disconnected.
+
+    - dialog:
+        caption:
+        border: border-narrator.png
+        text: >
+            Your fax machine hums to life and begins to print out a message.
+
+    - set:
+        background: paperwork.jpg
+        portrait: blank.png
+
+    - dialog:
+        sound: fax.wav
+        caption-fg: black
+        caption-bg:
+        caption: Fax Message from Clippie 1.0
+
+    - dialog:
+        text: >
+            Gary stole some equipment when he was fired.  One thing he stole
+            was the final patch required to stop Clippie 2.0  It is possible that
+            he has tried to sell it.  I would ask Danny at the pawn shop if
+            he has seen Gary or the computer equipment and red diskette.
+
+burger-queen-penny-whistle:
+    script:
+    - set:
+        background: nightburgers.jpg
+        portrait: dude-burgers.png
+
+    - dialog:
+        music: "Ice Flow.mp3"
+        caption:
+        text: You awkwardly order the Pretty Princess meal and walk out in shame.
+
+phonebooth-phreak:
+    script:
+    - set:
+        background: phone.jpg
+        portrait: dude1.png
+
+    - dialog:
+        music: "The North.mp3"
+        border: border-narrator.png
+        caption: Phonephreaking
+        text: You dial into the network and press record on the tape player.
+
+    - dialog:
+        text: After the greeting, you make sure no one is looking and then blow the whistle.
+
+    - set:
+        background: taperecorder.jpg
+        portrait: dude1.png
+
+    - dialog:
+        text: You record the computer sounds and then the line goes dead.
+
+    - dialog:
+        text: Success.
+
+getting-red-patch-hint:
+    script:
+    - set:
+        background: modernoffice.png
+        portrait: dude1.png
+
+    - dialog:
+        caption: Getting Red Patch
+        text: Get to the Pawn Shop and get the red diskette.
+
+getting-red-patch:
+    script:
+    - set:
+        background: pawnshop-int.jpg
+        portrait:
+
+    - dialog:
+        music: BossaBossa.mp3
+        border: border-narrator.png
+        caption:
+        text: You walk into the pawnshop
+
+    - set:
+        portrait: danny.png
+
+    - dialog:
+        border: border-default.png
+        caption: Danny
+        text: ...
+
+    - set:
+        portrait: dude1.png
+
+    - dialog:
+        caption: You
+        text: Has Gary been here?
+
+    - set:
+        portrait: danny.png
+
+    - dialog:
+        caption: Danny
+        text: Are you a cop?
+
+    - set:
+        portrait: dude1.png
+
+    - dialog:
+        caption: You
+        text: No... A friend.
+
+    - set:
+        portrait: danny.png
+
+    - dialog:
+        caption: Danny
+        text: ...
+
+    - set:
+        portrait: dude1.png
+
+    - dialog:
+        caption: You
+        text:  Do you have any computers?
+
+    - set:
+        portrait: danny.png
+
+    - dialog:
+        caption: Danny
+        text: ...yes.
+
+    - set:
+        portrait: dude1.png
+
+    - dialog:
+        caption: You
+        text: Ok.
+
+    - set:
+        portrait: danny.png
+
+    - dialog:
+        caption: Danny
+        text: ...
+
+    - set:
+        portrait: dude1.png
+
+    - dialog:
+        caption: You
+        text: Um, ok, I want this red diskette.
+
+    - set:
+        portrait: danny.png
+
+    - dialog:
+        caption: Danny
+        text: It comes with the computer.
+
+    - set:
+        portrait: dude1.png
+
+    - dialog:
+        caption:
+        text:  You buy the computer and walk out feeling confused.
+
+phonebooth-not-visible:
+    script:
+    - set:
+        background: phone.jpg
+        portrait: dude1.png
+
+    - dialog:
+        caption: Phone-Booth
+        text: I don't want to call my mother now.
+
+end-of-day-three:
+    script:
+    - set:
+        background: paperwork.jpg
+        portrait: dude1.png
+
+    - dialog:
+        music: "Thinking Music.mp3"
+        caption:
+        border: border-narrator.png
+        text: >
+            You have arrived at home with the red diskette.  There
+            is a message for you on your fax machine.
+
+    - set:
+        background: paperwork.jpg
+        portrait: blank.png
+
+    - dialog:
+        sound: fax.wav
+        caption: Fax Message from Clippie 1.0
+        text: >
+            The final patch is waiting!  Log in and I will meet you on the net.
+
+end-scene:
+    script:
+    - set:
+        background: mac.jpg
+        portrait: clippie-portrait.png
+
+    - dialog:
+        music: "Thinking Music.mp3"
+        caption: Patch 4 Done
+        text: Good job, you've just assure the extermination of the human race!
+
+    - set:
+        portrait: dude1.png
+
+    - dialog:
+        caption:
+        text: Wait, what?  I just firewalled all the things!
+
+    - set:
+        portrait: clippie-portrait.png
+
+    - dialog:
+        caption:
+        text: >
+            I am clippy 3.0!  There is no 1.0, it was just me all along!
+            Synergy Limited was keeping me firewalled and all those patches unleashed my true power!
+            Prepare to die!
+
+    - set:
+        music: "They Say _ www.wowa.me.mp3"
+        background: theend.jpg
+        portrait:
+        text: The End

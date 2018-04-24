@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="2018.03.21" orientation="orthogonal" renderorder="right-down" width="20" height="15" tilewidth="32" tileheight="32" infinite="0" nextobjectid="46">
+ <tileset firstgid="1" source="9ywlq.tsx"/>
+ <layer name="background" width="20" height="15">
+  <data encoding="csv">
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,
+17,17,17,17,17,17,17,17,17,17,1,1,1,1,1,1,1,1,2,2,
+1,1,1,1,1,1,1,1,1,1,1,1,2,17,1,2,2,2,2,18,
+17,17,17,17,1,17,17,1,1,1,1,1,1,1,1,1,1,1,1,1,
+33,33,33,33,17,1,1,1,1,51,1,1,1,17,17,1,1,1,1,1,
+33,34,34,1,1,1,1,1,1,49,1,1,1,1,1,2,2,2,1,1,
+1,1,1,1,1,1,1,1,1,49,49,49,51,1,1,1,1,18,18,1,
+17,17,17,1,1,1,1,51,49,49,49,1,1,1,1,1,2,1,1,1,
+33,33,1,1,1,1,1,1,1,1,49,1,1,1,1,1,1,1,1,1,
+34,1,1,1,1,1,1,1,1,1,51,1,1,1,17,17,1,1,17,17,
+1,17,17,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+1,1,1,1,1,1,1,2,1,1,2,2,2,17,17,17,17,17,17,1,
+1,1,1,1,1,1,1,1,1,2,18,18,18,33,33,33,33,1,1,1,
+17,17,17,1,1,1,1,1,18,18,34,34,34,1,1,2,2,2,2,2,
+33,33,33,33,1,1,1,33,34,34,33,34,2,2,2,18,18,18,18,18
+</data>
+ </layer>
+ <layer name="border" width="20" height="15">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,
+0,0,0,0,0,0,0,0,23,6,24,0,0,0,0,1,1,0,0,0,
+0,0,0,0,0,0,0,0,6,0,6,0,0,0,0,0,1,0,0,0,
+0,0,0,0,0,0,0,0,6,0,39,6,6,24,0,0,1,1,0,0,
+0,0,0,0,0,0,23,6,40,0,0,0,0,6,0,0,0,0,0,0,
+0,0,0,0,0,0,6,0,0,0,0,23,6,40,0,0,0,0,0,0,
+0,0,0,0,0,0,39,6,6,24,0,6,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,6,0,6,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,39,6,40,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup color="#0000ff" name="Boxes">
+  <object id="1" name="Box" x="320" y="192" width="32" height="32"/>
+  <object id="4" name="Box" x="320" y="224" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup color="#ffff7f" name="Walls" locked="1">
+  <object id="9" name="Wall" x="256" y="96" width="96" height="32"/>
+  <object id="10" name="Wall" x="192" y="192" width="96" height="32"/>
+  <object id="11" name="Wall" x="256" y="96" width="32" height="128"/>
+  <object id="12" name="Wall" x="192" y="192" width="32" height="96"/>
+  <object id="13" name="Wall" x="320" y="96" width="32" height="96"/>
+  <object id="14" name="Wall" x="320" y="160" width="128" height="32"/>
+  <object id="15" name="Wall" x="416" y="160" width="32" height="96"/>
+  <object id="16" name="Wall" x="352" y="224" width="96" height="32"/>
+  <object id="17" name="Wall" x="288" y="320" width="96" height="32"/>
+  <object id="18" name="Wall" x="192" y="256" width="128" height="32"/>
+  <object id="19" name="Wall" x="288" y="256" width="32" height="96"/>
+  <object id="20" name="Wall" x="352" y="224" width="32" height="128"/>
+ </objectgroup>
+ <objectgroup color="#ff0000" name="Player">
+  <object id="45" name="Player" x="320" y="256" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup color="#00aa00" name="Goal" locked="1">
+  <object id="39" name="Goal" x="288" y="128" width="32" height="32"/>
+  <object id="40" name="Goal" x="384" y="192" width="32" height="32"/>
+  <object id="41" name="Goal" x="320" y="288" width="32" height="32"/>
+  <object id="42" name="Goal" x="224" y="224" width="32" height="32"/>
+ </objectgroup>
+</map>

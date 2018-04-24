@@ -1,0 +1,153 @@
+---
+START:
+  name: Home
+  description: >
+    I should go to work to see if Clippie got some more information
+  edges:
+    - vertex-id: BURGERQUEEN
+    - vertex-id: PARK
+    - vertex-id: PHONEBOOTH
+
+  activation:
+   command: "launch-mini-game"
+   activation-keyword-args:
+     mini-game-name: "Cutscene"
+     mini-game-keyword-args:
+       scene_name: "end-of-day-three"
+       scene_file_name: "cutscenes.yaml"
+     post-run-actions:
+      - action: "exit-action"
+
+  activation-pre-requisites:
+    - key: "got-red-patch"
+      value: "true"
+      hint: "I don't want to go home yet!"
+
+  coordinates:
+    x: 1154
+    y: 55
+  icon: house_32x32.png
+
+BURGERQUEEN:
+  name: Burger Queen
+  description: >
+    Flamboyant home of the Dazzle Burger and Fab-Fries.
+  edges:
+    - vertex-id: START
+    - vertex-id: PARK
+    - vertex-id: WORK
+    - vertex-id: PAWNSHOP
+  coordinates:
+    x: 715
+    y: 30
+  icon: burgerqueen.png
+  activation:
+   command: "launch-mini-game"
+   activation-keyword-args:
+    mini-game-name: "Cutscene"
+    mini-game-keyword-args:
+      scene_name: "no-time-for-burger-queen"
+      scene_file_name: "cutscenes.yaml"
+
+
+PHONEBOOTH:
+  name: Phonebooth
+  description: >
+    I don't want to call my mother now.
+  edges:
+    - vertex-id: START
+    - vertex-id: PARK
+  coordinates:
+    x: 1000
+    y: 360
+  icon: phonebooth.png
+  activation:
+   command: "launch-mini-game"
+   activation-keyword-args:
+    mini-game-name: "Cutscene"
+    mini-game-keyword-args:
+      scene_name: "phonebooth-not-visible"
+      scene_file_name: "cutscenes.yaml"
+
+
+
+PARK:
+  name: McFly Park
+  description: >
+    A stunted tree casts a shadow on the fake grass.
+  edges:
+    - vertex-id: START
+    - vertex-id: BURGERQUEEN
+    - vertex-id: WORK
+    - vertex-id: PAWNSHOP
+  coordinates:
+    x: 820
+    y: 340
+  activation:
+   command: "launch-mini-game"
+   activation-keyword-args:
+     mini-game-name: "Cutscene"
+     mini-game-keyword-args:
+       scene_name: "no-time-for-the-park"
+       scene_file_name: "cutscenes.yaml"
+
+
+WORK:
+  name: Synergy Limited
+  description: >
+    Maximizing profit potential through right-sized end-goals.
+  edges:
+    - vertex-id: PARK
+    - vertex-id: BURGERQUEEN
+    - vertex-id: PAWNSHOP
+  coordinates:
+    x: 286
+    y: 150
+  icon: work.png
+  activation:
+   command: "launch-mini-game"
+   activation-keyword-args:
+     mini-game-name: "Cutscene"
+     mini-game-keyword-args:
+       scene_name: "getting-red-patch-hint"
+       scene_file_name: "cutscenes.yaml"
+     post-run-actions:
+       - action: "set-context-value"
+         context-key: "got-red-patch-hint"
+         context-value: "true"
+
+
+PAWNSHOP:
+  name: Pawn Shop
+  description: >
+   Abuelo is waiting to sell you his wares.
+  edges:
+   - vertex-id: BURGERQUEEN
+   - vertex-id: WORK
+   - vertex-id: PARK
+  icon: el-pawn-shop.png
+  coordinates:
+    x: 600
+    y: 150
+  activation:
+   command: "launch-mini-game"
+   activation-keyword-args:
+     mini-game-name: "Cutscene"
+     mini-game-keyword-args:
+       scene_name: "getting-red-patch"
+       scene_file_name: "cutscenes.yaml"
+     post-run-actions:
+       - action: "set-context-value"
+         context-key: "got-red-patch"
+         context-value: "true"
+  activation-pre-requisites:
+     - key: "got-red-patch-hint"
+       value: "true"
+       hint: "I should talk to Clippie."
+
+GLOBAL:
+ background: overworld_background
+...
+
+
+
