@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.1.4" orientation="orthogonal" renderorder="right-down" width="40" height="24" tilewidth="32" tileheight="32" infinite="0" nextobjectid="207">
+<map version="1.0" tiledversion="1.1.4" orientation="orthogonal" renderorder="right-down" width="40" height="24" tilewidth="32" tileheight="32" infinite="0" nextobjectid="212">
  <layer name="Kachelebene 1" width="40" height="24">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -31,102 +31,64 @@
  <objectgroup name="Bricks">
   <object id="2" name="Brick" x="32" y="64" width="64" height="32"/>
   <object id="4" name="Brick" x="96" y="64" width="64" height="32"/>
-  <object id="6" name="Brick" x="64" y="96" width="64" height="32"/>
-  <object id="7" name="Brick" x="128" y="96" width="64" height="32"/>
   <object id="8" name="Brick" x="160" y="64" width="64" height="32"/>
-  <object id="9" name="Brick" x="192" y="96" width="64" height="32"/>
   <object id="10" name="Brick" x="224" y="64" width="64" height="32"/>
   <object id="11" name="Brick" x="288" y="64" width="64" height="32"/>
-  <object id="12" name="Brick" x="256" y="96" width="64" height="32"/>
-  <object id="13" name="Brick" x="320" y="96" width="64" height="32"/>
   <object id="14" name="Brick" x="352" y="64" width="64" height="32"/>
-  <object id="15" name="Brick" x="384" y="96" width="64" height="32"/>
   <object id="16" name="Brick" x="416" y="64" width="64" height="32"/>
   <object id="17" name="Brick" x="480" y="64" width="64" height="32"/>
-  <object id="18" name="Brick" x="448" y="96" width="64" height="32"/>
-  <object id="28" name="Brick" x="32" y="128" width="64" height="32"/>
-  <object id="29" name="Brick" x="96" y="128" width="64" height="32"/>
-  <object id="30" name="Brick" x="64" y="160" width="64" height="32"/>
-  <object id="31" name="Brick" x="128" y="160" width="64" height="32"/>
-  <object id="32" name="Brick" x="160" y="128" width="64" height="32"/>
-  <object id="33" name="Brick" x="192" y="160" width="64" height="32"/>
-  <object id="34" name="Brick" x="224" y="128" width="64" height="32"/>
-  <object id="35" name="Brick" x="288" y="128" width="64" height="32"/>
-  <object id="36" name="Brick" x="256" y="160" width="64" height="32"/>
-  <object id="37" name="Brick" x="320" y="160" width="64" height="32"/>
-  <object id="38" name="Brick" x="352" y="128" width="64" height="32"/>
-  <object id="39" name="Brick" x="384" y="160" width="64" height="32"/>
-  <object id="40" name="Brick" x="416" y="128" width="64" height="32"/>
-  <object id="41" name="Brick" x="480" y="128" width="64" height="32"/>
-  <object id="42" name="Brick" x="448" y="160" width="64" height="32"/>
-  <object id="47" name="Brick" x="32" y="192" width="64" height="32"/>
-  <object id="48" name="Brick" x="96" y="192" width="64" height="32"/>
-  <object id="49" name="Brick" x="64" y="224" width="64" height="32"/>
-  <object id="50" name="Brick" x="128" y="224" width="64" height="32"/>
-  <object id="51" name="Brick" x="160" y="192" width="64" height="32"/>
-  <object id="52" name="Brick" x="192" y="224" width="64" height="32"/>
-  <object id="53" name="Brick" x="224" y="192" width="64" height="32"/>
-  <object id="54" name="Brick" x="288" y="192" width="64" height="32"/>
-  <object id="55" name="Brick" x="256" y="224" width="64" height="32"/>
-  <object id="56" name="Brick" x="320" y="224" width="64" height="32"/>
-  <object id="57" name="Brick" x="352" y="192" width="64" height="32"/>
-  <object id="58" name="Brick" x="384" y="224" width="64" height="32"/>
-  <object id="59" name="Brick" x="416" y="192" width="64" height="32"/>
-  <object id="60" name="Brick" x="480" y="192" width="64" height="32"/>
-  <object id="61" name="Brick" x="448" y="224" width="64" height="32"/>
-  <object id="69" name="Brick" x="704" y="96" width="64" height="32"/>
+  <object id="32" name="Brick" x="160" y="160" width="64" height="32"/>
+  <object id="34" name="Brick" x="224" y="160" width="64" height="32"/>
+  <object id="38" name="Brick" x="352" y="160" width="64" height="32"/>
+  <object id="40" name="Brick" x="416" y="160" width="64" height="32"/>
+  <object id="41" name="Brick" x="480" y="160" width="64" height="32"/>
+  <object id="47" name="Brick" x="32" y="256" width="64" height="32"/>
+  <object id="48" name="Brick" x="96" y="256" width="64" height="32"/>
+  <object id="49" name="Brick" x="64" y="352" width="64" height="32"/>
+  <object id="50" name="Brick" x="128" y="352" width="64" height="32"/>
+  <object id="51" name="Brick" x="160" y="256" width="64" height="32"/>
+  <object id="52" name="Brick" x="192" y="352" width="64" height="32"/>
+  <object id="53" name="Brick" x="224" y="256" width="64" height="32"/>
+  <object id="54" name="Brick" x="288" y="256" width="64" height="32"/>
+  <object id="55" name="Brick" x="256" y="352" width="64" height="32"/>
+  <object id="56" name="Brick" x="320" y="352" width="64" height="32"/>
+  <object id="57" name="Brick" x="352" y="256" width="64" height="32"/>
+  <object id="58" name="Brick" x="384" y="352" width="64" height="32"/>
+  <object id="59" name="Brick" x="416" y="256" width="64" height="32"/>
+  <object id="61" name="Brick" x="448" y="352" width="64" height="32"/>
   <object id="70" name="Brick" x="736" y="64" width="64" height="32"/>
-  <object id="71" name="Brick" x="768" y="96" width="64" height="32"/>
   <object id="72" name="Brick" x="800" y="64" width="64" height="32"/>
   <object id="73" name="Brick" x="864" y="64" width="64" height="32"/>
-  <object id="74" name="Brick" x="832" y="96" width="64" height="32"/>
-  <object id="75" name="Brick" x="896" y="96" width="64" height="32"/>
   <object id="76" name="Brick" x="928" y="64" width="64" height="32"/>
-  <object id="77" name="Brick" x="960" y="96" width="64" height="32"/>
   <object id="78" name="Brick" x="992" y="64" width="64" height="32"/>
   <object id="79" name="Brick" x="1056" y="64" width="64" height="32"/>
-  <object id="80" name="Brick" x="1024" y="96" width="64" height="32"/>
-  <object id="81" name="Brick" x="1088" y="96" width="64" height="32"/>
   <object id="82" name="Brick" x="1120" y="64" width="64" height="32"/>
-  <object id="83" name="Brick" x="1152" y="96" width="64" height="32"/>
   <object id="84" name="Brick" x="1184" y="64" width="64" height="32"/>
-  <object id="88" name="Brick" x="704" y="160" width="64" height="32"/>
-  <object id="89" name="Brick" x="736" y="128" width="64" height="32"/>
-  <object id="90" name="Brick" x="768" y="160" width="64" height="32"/>
-  <object id="91" name="Brick" x="800" y="128" width="64" height="32"/>
-  <object id="92" name="Brick" x="864" y="128" width="64" height="32"/>
-  <object id="93" name="Brick" x="832" y="160" width="64" height="32"/>
-  <object id="94" name="Brick" x="896" y="160" width="64" height="32"/>
-  <object id="95" name="Brick" x="928" y="128" width="64" height="32"/>
-  <object id="96" name="Brick" x="960" y="160" width="64" height="32"/>
-  <object id="97" name="Brick" x="992" y="128" width="64" height="32"/>
-  <object id="98" name="Brick" x="1056" y="128" width="64" height="32"/>
-  <object id="99" name="Brick" x="1024" y="160" width="64" height="32"/>
-  <object id="100" name="Brick" x="1088" y="160" width="64" height="32"/>
-  <object id="101" name="Brick" x="1120" y="128" width="64" height="32"/>
-  <object id="102" name="Brick" x="1152" y="160" width="64" height="32"/>
-  <object id="103" name="Brick" x="1184" y="128" width="64" height="32"/>
-  <object id="107" name="Brick" x="704" y="224" width="64" height="32"/>
-  <object id="108" name="Brick" x="736" y="192" width="64" height="32"/>
-  <object id="109" name="Brick" x="768" y="224" width="64" height="32"/>
-  <object id="110" name="Brick" x="800" y="192" width="64" height="32"/>
-  <object id="111" name="Brick" x="864" y="192" width="64" height="32"/>
-  <object id="112" name="Brick" x="832" y="224" width="64" height="32"/>
-  <object id="113" name="Brick" x="896" y="224" width="64" height="32"/>
-  <object id="114" name="Brick" x="928" y="192" width="64" height="32"/>
-  <object id="115" name="Brick" x="960" y="224" width="64" height="32"/>
-  <object id="116" name="Brick" x="992" y="192" width="64" height="32"/>
-  <object id="117" name="Brick" x="1056" y="192" width="64" height="32"/>
-  <object id="118" name="Brick" x="1024" y="224" width="64" height="32"/>
-  <object id="119" name="Brick" x="1088" y="224" width="64" height="32"/>
-  <object id="120" name="Brick" x="1120" y="192" width="64" height="32"/>
-  <object id="121" name="Brick" x="1152" y="224" width="64" height="32"/>
-  <object id="122" name="Brick" x="1184" y="192" width="64" height="32"/>
-  <object id="123" name="Brick" x="1216" y="96" width="64" height="32"/>
-  <object id="124" name="Brick" x="1216" y="160" width="64" height="32"/>
-  <object id="125" name="Brick" x="1216" y="224" width="64" height="32"/>
-  <object id="126" name="Brick" x="0" y="96" width="64" height="32"/>
-  <object id="127" name="Brick" x="0" y="160" width="64" height="32"/>
-  <object id="128" name="Brick" x="0" y="224" width="64" height="32"/>
+  <object id="89" name="Brick" x="736" y="160" width="64" height="32"/>
+  <object id="91" name="Brick" x="800" y="160" width="64" height="32"/>
+  <object id="92" name="Brick" x="864" y="160" width="64" height="32"/>
+  <object id="97" name="Brick" x="992" y="160" width="64" height="32"/>
+  <object id="98" name="Brick" x="1056" y="160" width="64" height="32"/>
+  <object id="108" name="Brick" x="736" y="256" width="64" height="32"/>
+  <object id="109" name="Brick" x="768" y="352" width="64" height="32"/>
+  <object id="110" name="Brick" x="800" y="256" width="64" height="32"/>
+  <object id="111" name="Brick" x="864" y="256" width="64" height="32"/>
+  <object id="112" name="Brick" x="832" y="352" width="64" height="32"/>
+  <object id="113" name="Brick" x="896" y="352" width="64" height="32"/>
+  <object id="114" name="Brick" x="928" y="256" width="64" height="32"/>
+  <object id="115" name="Brick" x="960" y="352" width="64" height="32"/>
+  <object id="116" name="Brick" x="992" y="256" width="64" height="32"/>
+  <object id="117" name="Brick" x="1056" y="256" width="64" height="32"/>
+  <object id="118" name="Brick" x="1024" y="352" width="64" height="32"/>
+  <object id="119" name="Brick" x="1088" y="352" width="64" height="32"/>
+  <object id="120" name="Brick" x="1120" y="256" width="64" height="32"/>
+  <object id="121" name="Brick" x="1152" y="352" width="64" height="32"/>
+  <object id="122" name="Brick" x="1184" y="256" width="64" height="32"/>
+  <object id="125" name="Brick" x="1216" y="352" width="64" height="32"/>
+  <object id="128" name="Brick" x="0" y="352" width="64" height="32"/>
+  <object id="207" name="Brick" x="544" y="64" width="64" height="32"/>
+  <object id="208" name="Brick" x="608" y="64" width="64" height="32"/>
+  <object id="209" name="Brick" x="672" y="64" width="64" height="32"/>
+  <object id="211" name="Brick" x="480" y="256" width="64" height="32"/>
  </objectgroup>
 </map>

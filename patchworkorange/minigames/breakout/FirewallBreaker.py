@@ -248,7 +248,7 @@ class FirewallBreaker(Minigame):
                 sound = pygame.mixer.Sound(resources.get_sound_asset("open_hat.wav"))
                 sound.play()
 
-                if random.random() < 0.5 and not self.player.has_powerup and self.powerup is None:
+                if random.random() < 0.80 and not self.player.has_powerup and self.powerup is None:
                     self.powerup = PowerUp(brick.topleft)
                 break
 
