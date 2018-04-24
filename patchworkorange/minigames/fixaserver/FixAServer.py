@@ -1,32 +1,24 @@
+import os
+import random
 import sys
+from logging import getLogger
 
 import collections
-import copy
-import random
-
-import os
-from time import sleep
-
-from pytmx.pytmx import TiledTileLayer
-from pygame import USEREVENT as FIRIN_MA_LAZ0R
-from patchworkorange.core.minigamemanager import Minigame
-from patchworkorange.core import resources
-from logging import getLogger
-
 import pygame
 import pytmx
+from pygame import USEREVENT as FIRIN_MA_LAZ0R
+from pytmx.pytmx import TiledTileLayer
 
-from logging import getLogger
+from patchworkorange.core import resources
+from patchworkorange.core.minigamemanager import Minigame
 
 logger = getLogger(__name__)
-
 
 BLOCK_SIZE = (32, 32)
 FREE_SERVERS = list(range(9))
 GAME_DICT = {}
 
 FIX_ME = ["INACTIVE" for _ in range(9)]
-
 
 WINDOW_SIZE = (1280, 720)
 FIRIN_MA_LAZ0R -= 10
@@ -43,13 +35,16 @@ class FixAServer(Minigame):
         self.screen = None
         self.clock = None
         self.font = None
-        self.time = 30*1000
+        self.time = 25 * 1000
         self.missed = 0
         self.score = 0
-        self.areas = [("Research", (250, 450)), ("Human Resources", (800, 100)), ("Server-Farm", (100, 50)), ("System Admins", (800, 400))]
+        self.areas = [("Research", (250, 450)), ("Human Resources", (900, 100)), ("Server-Farm", (100, 50)),
+                      ("System Admins", (800, 400))]
         self.labels = []
         self.background = pygame.image.load(resources.get_image_asset("terminal.png"))
-        self.pc = pygame.image.load(resources.get_image_asset("server.png")).convert()
+        pc = pygame.image.load(resources.get_image_asset("server.png"))
+        w, h = pc.get_size()
+        self.pc = pygame.transform.scale(pc, (w * 2, h * 2)).convert()
         self.pc.set_colorkey((255, 0, 255))
 
         self.tried_fixing = 0
@@ -65,7 +60,7 @@ class FixAServer(Minigame):
         self.screen.set_colorkey((255, 0, 255))
         self.clock = pygame.time.Clock()
         pygame.display.set_caption(self.GAME_NAME)
-        pygame.time.set_timer(FIRIN_MA_LAZ0R+1, 1200)
+        pygame.time.set_timer(FIRIN_MA_LAZ0R + 1, 1200)
         self.font = pygame.font.SysFont("monospace", 15, bold=True)
 
         for area, pos in self.areas:
@@ -100,7 +95,7 @@ class FixAServer(Minigame):
         pygame.mouse.set_visible(False)
 
     def fix_server(self, i):
-        pygame.time.set_timer(FIRIN_MA_LAZ0R+2+i, 0)
+        pygame.time.set_timer(FIRIN_MA_LAZ0R + 2 + i, 0)
         if FIX_ME[i] == "ACTIVE" and self.score < 20:
             FIX_ME[i] = "INACTIVE"
             FREE_SERVERS.append(i)
@@ -112,32 +107,32 @@ class FixAServer(Minigame):
                 sys.exit(0)
             if event.type == pygame.MOUSEBUTTONDOWN:
                 return self.handle_mouse_click(event)
-            if event.type == FIRIN_MA_LAZ0R+1:
+            if event.type == FIRIN_MA_LAZ0R + 1:
                 if collections.Counter(FIX_ME)["INACTIVE"] > 7:
                     r = random.choice(FREE_SERVERS)
-                    #if self.score == 20:
+                    # if self.score == 20:
                     #    pygame.time.set_timer(FIRIN_MA_LAZ0R+1, 0)
                     #    r = random.choice([7, 8, 9])
                     FREE_SERVERS.remove(r)
-                    pygame.time.set_timer(FIRIN_MA_LAZ0R+2+r, 750)
+                    pygame.time.set_timer(FIRIN_MA_LAZ0R + 2 + r, 1000)
                     FIX_ME[r] = "ACTIVE"
-            if event.type == FIRIN_MA_LAZ0R+2+0:
+            if event.type == FIRIN_MA_LAZ0R + 2 + 0:
                 self.fix_server(0)
-            if event.type == FIRIN_MA_LAZ0R+2+1:
+            if event.type == FIRIN_MA_LAZ0R + 2 + 1:
                 self.fix_server(1)
-            if event.type == FIRIN_MA_LAZ0R+2+2:
+            if event.type == FIRIN_MA_LAZ0R + 2 + 2:
                 self.fix_server(2)
-            if event.type == FIRIN_MA_LAZ0R+2+3:
+            if event.type == FIRIN_MA_LAZ0R + 2 + 3:
                 self.fix_server(3)
-            if event.type == FIRIN_MA_LAZ0R+2+4:
+            if event.type == FIRIN_MA_LAZ0R + 2 + 4:
                 self.fix_server(4)
-            if event.type == FIRIN_MA_LAZ0R+2+5:
+            if event.type == FIRIN_MA_LAZ0R + 2 + 5:
                 self.fix_server(5)
-            if event.type == FIRIN_MA_LAZ0R+2+6:
+            if event.type == FIRIN_MA_LAZ0R + 2 + 6:
                 self.fix_server(6)
-            if event.type == FIRIN_MA_LAZ0R+2+7:
+            if event.type == FIRIN_MA_LAZ0R + 2 + 7:
                 self.fix_server(7)
-            if event.type == FIRIN_MA_LAZ0R+2+8:
+            if event.type == FIRIN_MA_LAZ0R + 2 + 8:
                 self.fix_server(8)
 
         return True
@@ -186,14 +181,14 @@ class FixAServer(Minigame):
     def render_layer(self, layer):
         w, h = BLOCK_SIZE
         for x, y, tile in layer.tiles():
-            #tile = tile.convert()
+            # tile = tile.convert()
             tile.set_colorkey((255, 0, 255))
             self.screen.blit(tile, (x * w, y * h))
 
     def handle_mouse_click(self, event):
         for key, value in GAME_DICT.items():
             if value.collidepoint(event.pos):
-                pygame.time.set_timer(FIRIN_MA_LAZ0R+2+int(key[-1]), 0)
+                pygame.time.set_timer(FIRIN_MA_LAZ0R + 2 + int(key[-1]), 0)
                 FIX_ME[int(key[-1])] = "INACTIVE"
                 self.score += 1
                 FREE_SERVERS.append(int(key[-1]))
@@ -204,13 +199,14 @@ class FixAServer(Minigame):
             if server == "ACTIVE":
                 server_pos = GAME_DICT["Server_{}".format(i)]
                 fixme_surface = pygame.image.load(resources.get_image_asset(os.path.join("fixaserver", "fixme.png")))
-                pos = tuple([x - y for x, y in zip(server_pos.center, (fixme_surface.get_rect().width//2, fixme_surface.get_rect().height//2))])
+                pos = tuple([x - y for x, y in zip(server_pos.center, (
+                    fixme_surface.get_rect().width // 2, fixme_surface.get_rect().height // 2))])
                 self.screen.blit(fixme_surface, pos)
 
     def render_score(self):
         label = self.font.render("Missed: {}/6".format(str(self.missed)), 1, pygame.Color("RED"))
         self.screen.blit(label, (10, 450))
-        label = self.font.render("Time: {}".format(str(self.time/1000.0)), 1, pygame.Color("GREEN"))
+        label = self.font.render("Time: {}".format(str(self.time / 1000.0)), 1, pygame.Color("GREEN"))
         self.screen.blit(label, (500, 10))
 
     def render_areas(self):
@@ -221,9 +217,3 @@ class FixAServer(Minigame):
         for key, value in GAME_DICT.items():
             if key is not None and "Server" in key:
                 self.screen.blit(self.pc, value.topleft)
-
-
-
-
-
-
